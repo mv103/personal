@@ -1,0 +1,16 @@
+/* CSS for my personal website and portfolio! */
+
+header {
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+}
+
+header h1 {
+  font-size: 50pt;
+  font-weight: 700;
+}
+
+#name {
+  font-family: 'Libre Bodoni', serif;
+  text-transform: capitalize;
+}
