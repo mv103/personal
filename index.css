@@ -1,16 +1,88 @@
 /* CSS for my personal website and portfolio! */
 
-header {
+#home {
   font-family: 'Karla', sans-serif;
   text-transform: uppercase;
 }
 
-header h1 {
-  font-size: 50pt;
-  font-weight: 700;
+#welcome-text {
+  position: absolute;
+  margin: 15% 25%;
+  text-align:left;
+  font-size: 34pt;
 }
 
 #name {
   font-family: 'Libre Bodoni', serif;
   text-transform: capitalize;
+  padding-left: 10%;
+  font-weight: 500;
 }
+
+#welcome-text p {
+  font-family: 'Libre Bodoni', serif;
+  font-size: 16pt;
+  text-transform: none;
+  line-height: 35px;
+  border-left: 20px solid black;
+  padding-left: 20px;
+}
+
+.nav-bar {
+  float: right;
+  margin-top: 20px;
+  padding-right: 10px;
+}
+
+.nav-bar a {
+  color: black;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-size: 16pt;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
+  text-decoration-color: #FF5F1A;
+}
+
+.nav-bar a:visited {
+  color: black;
+}
+
+.logo img {
+  width: 15%;
+  float: left;
+  padding-left: 5%;
+  padding-top: 2%;
+}
+
+.radial-duo {
+  float: left;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+#pfp {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+#about {
+  position: relative;
+  text-align: center;
+}
+
+#about p {
+  font-family: 'Karla', sans-serif;
+  font-size: 16pt;
+  line-height: 15px;
+}
+
+
+/* for download resume on hover
+ * border: 1px solid #FF5F1A;
+ * padding 10px 25px;
+ */
