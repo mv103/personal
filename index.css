@@ -118,7 +118,7 @@
   margin-bottom: 10%;
 }
 
-#resume-text h1 {
+#resume-text h1, #projects-text h1 {
   display: inline;
   font-family: 'Karla', sans-serif;
   font-size: 27pt;
@@ -153,11 +153,42 @@
   text-decoration-color: #FF5F1A;
 }
 
-#resume-text {
+#resume-text, #projects-text, .proj-unit {
   margin-left: 10%;
 }
 
-/* for download resume on hover
- * border: 1px solid #FF5F1A;
- * padding 10px 25px;
- */
+.proj-unit {
+  margin-right: 10%;
+  margin-top: 4%;
+  line-height: 35px;
+}
+
+.proj-unit h2 {
+  font-family: 'Karla', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.proj-unit h2 span {
+  text-transform: none;
+}
+
+.proj-unit h3 {
+  font-family: 'Libre Bodoni', serif;
+  font-size: 16pt;
+  text-transform: capitalize;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.proj-unit p {
+  font-family: 'Karla', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+}
+
+#objective {
+  text-decoration: underline;
+  margin-top: 4%;
+}
