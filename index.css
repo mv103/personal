@@ -75,7 +75,6 @@
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10%;
   padding: 20px;
   width: 300px;
 
@@ -115,6 +114,10 @@
   line-height: 15px;
 }
 
+.spacer{
+  margin-bottom: 10%;
+}
+
 #resume-text h1 {
   display: inline;
   font-family: 'Karla', sans-serif;
@@ -125,6 +128,34 @@
   padding: 5px;
 }
 
+#resume-text p {
+  font-family: 'Libre Bodoni', serif;
+  font-size: 16pt;
+  color: black;
+  text-transform: capitalize;
+  border-left: 20px solid black;
+  padding: 5px;
+  padding-left: 25px;
+}
+
+#resume-text p a {
+  text-decoration: none;
+  color: black;
+}
+
+#resume-text p a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#resume-text p a:hover {
+  text-decoration: underline;
+  text-decoration-color: #FF5F1A;
+}
+
+#resume-text {
+  margin-left: 10%;
+}
 
 /* for download resume on hover
  * border: 1px solid #FF5F1A;
