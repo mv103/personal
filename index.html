@@ -6,6 +6,9 @@
     <title>Michelle Vu</title>
     <link href='style.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&family=Libre+Bodoni&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/b2db3de8d7.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -17,7 +20,7 @@
         <a href="#about-me">About Me</a>
         <a href="#resume">Resume</a>
         <a href="#projects">Projects</a>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
       <img src="img/radialduo.png" alt="decorative circles" class="radial-duo">
       <div id="welcome-text">
@@ -54,7 +57,7 @@
       <div id="projects-text">
         <h1>Projects</h1>
       </div>
-      <div class="proj-unit">
+      <div class="proj-container">
         <h2>Design CoMission Internship<br><span> with LSW Architects</span></h2>
         <h3><em>"The Marshall Park Project"</em></h3>
         <p>
@@ -75,19 +78,133 @@
           This will ensure that every visit to Marshall Park will encourage engagement with one's
           intellectual, emotional and physical vitality, regardless of limitations.
         </p>
-        <div class="carousel-container">
-          <div class="carousel-slide">
-            <img id="last-clone" src="img/projects/cad-closeup.png" alt="Marshall Park SketchUp Render">
-            <img src="img/projects/bubblediagram.png" alt="Marshall Park Bubble Diagram">
-            <img src="img/projects/redesign-overview.png" alt="Marshall Park Redesgin Overview">
-            <img src="img/projects/cad-overview.png" alt="Marshall Park SketchUp Render">
-            <img src="img/projects/cad-closeup.png" alt="Marshall Park SketchUp Render">
-            <img id="first-clone" src="img/projects/bubblediagram.png" alt="Marshall Park Bubble Diagram">
+      </div>
+      <div class="carousel-container">
+        <i class="fa-solid fa-angle-left" id="prevBtn1"></i>
+        <i class="fa-solid fa-angle-right" id="nextBtn1"></i>
+        <div class="carousel-slide1">
+          <img src="img/projects/redesign-overview.png" id="lastClone1" alt="">
+          <img src="img/projects/bubblediagram.png" alt="">
+          <img src="img/projects/cad-closeup.png" alt="">
+          <img src="img/projects/cad-overview.png" alt="">
+          <img src="img/projects/redesign-overview.png" alt="">
+          <img src="img/projects/bubblediagram.png" id="firstClone1" alt="">
+        </div>
+      </div>
+
+      <section class="spacer"></section>
+
+      <div class="proj-container">
+        <h2>Exploration of fashion and reusability</h2>
+        <h3><em>"Sustainable Bags"</em></h3>
+        <p>
+          Prompted by the sustainable fashion movement, the mission to reduce textile waste and
+          minimize my overall carbon footprint, I accepted the challenge of learning to sew by
+          machine. Through sewing and upcycling, I took the first steps to research sustainability
+          and incorporate it into my lifestyle realizing the importance of conservation.
+          As I continue to study, I am motivated by my passions for art, culture, and environment
+          and seek further understanding of diversity, energy-efficient practices, and artistry
+          prevalent in influential technology today.
+        </p>
+      </div>
+      <div class="carousel-container">
+        <i class="fa-solid fa-angle-left" id="prevBtn2"></i>
+        <i class="fa-solid fa-angle-right" id="nextBtn2"></i>
+        <div class="carousel-slide2">
+          <img src="img/projects/bags-process.png" id="lastClone2" alt="">
+          <img src="img/projects/bags.png" alt="">
+          <img src="img/projects/bags-process.png" alt="">
+          <img src="img/projects/bags.png" id="firstClone2" alt="">
+        </div>
+      </div>
+
+      <section class="spacer"></section>
+
+      <div class="proj-container">
+        <h2>Multimedia artwork</h2>
+        <p>
+          Art has been a part of my life since I was young. Showcased here are various artworks
+          produced with different mediums that were influenced by my perspective of fine art,
+          Vietnamese culture, and personal experiences.
+        </p>
+      </div>
+      <div id="gallery">
+        <div class="gal-container">
+          <img src="img/projects/family.jpg" alt="my artwork" class="image">
+          <div class="overlay">
+            <div class="text">
+              <h1>Family Portrait</h1>
+              <h2>2020 | Pen and Pencil | 27.9 x 38.1 cm</h2>
+              <p>My family represented as their Chinese Zodiac animals, conveying the value of
+                honoring family, respect, and tradition.</p>
+            </div>
           </div>
         </div>
-        <button class="prev-btn">Prev</button>
-        <button class="next-btn">Next</button>
+        <div class="gal-container">
+          <img src="img/projects/pocky.jpg" alt="my artwork" class="image">
+          <div class="overlay">
+            <div class="text">
+              <h1>Oh! You Like Pocky Too?</h1>
+              <h2>2020 | Acrylic and Watercolor | 22.5 x 31 cm</h2>
+              <p>Pocky is a common childhood snack to many Asian children; however, each person's
+                box accumulates unique cultural significance. Here's mine.</p>
+            </div>
+          </div>
+        </div>
+        <div class="gal-container">
+          <img src="img/projects/jamaisvu.jpg" alt="my artwork" class="image">
+          <div class="overlay">
+            <div class="text">
+              <h1>Jamais Vu</h1>
+              <h2>2020 | Pencil | 20.5 x 11 cm</h2>
+              <p>A young girl reflects on her possible future selves represented in the different
+                facets staring back at her.</p>
+            </div>
+          </div>
+        </div>
+        <div class="gal-container">
+          <img src="img/projects/lookhere.jpg" alt="my artwork" class="image">
+          <div class="overlay">
+            <div class="text">
+              <h1>Look Here</h1>
+              <h2>2020 | Pen | 19.5 x 14.5 cm</h2>
+              <p>An exploration of perspective and my observation of Asian inspired streetwear
+                walking over the seas to influence western culture.</p>
+            </div>
+          </div>
+        </div>
+        <div class="gal-container">
+          <img src="img/projects/yinyang.jpg" alt="my artwork" class="image">
+          <div class="overlay">
+            <div class="text">
+              <h1>Yin and Yang</h1>
+              <h2>2020 | Hard pastel | 30.5 x 50.5 cm</h2>
+              <p>This still life juxtaposes the vibrant colors of the apples against the calm black
+                and white cloth, creating a balance</p>
+            </div>
+          </div>
+        </div>
+        <div class="gal-container">
+          <img src="img/projects/tigerlily.jpg" alt="my artwork" class="image">
+          <div class="overlay">
+            <div class="text">
+              <h1>Tiger Lily</h1>
+              <h2>2020 | Hard pastel | 15 x 20 cm</h2>
+              <p>The tiger lily in focus is a symbol of confidence as it blooms amongst flora
+                alike, unafraid to express its striking colors.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="spacer"></section>
+    </section>
+
+    <section id="contact">
+      <div id="contact-text">
+        <h1>Contact</h1>
       </div>
     </section>
+
+    <script src="app.js"></script>
   </body>
 </html>

@@ -2,36 +2,108 @@
 
 (function() {
 
-  const carouselSlide = qs(".carousel-slide");
-  const carouselImages = qsa(".carousel-slide img")
+  //FIRST CAROUSEL
+  const carouselSlide1 = qs('.carousel-slide1');
+  const carouselImages1 = qsa('.carousel-slide1 img');
 
-  const prevBtn = qs(".prev-btn");
-  const nextBtn = qs(".next-btn");
+  //Buttons
+  const previousBtn1 = qs("#prevBtn1");
+  const nextBtn1 = qs("#nextBtn1");
 
-  let count = 1;
-  const size = carouselImages[0].clientWidth;
+  //Counter
+  let counter1 = 1;
+  const size1 = carouselImages1[0].clientWidth;
+
+  //SECOND CAROUSEL
+  const carouselSlide2 = qs(".carousel-slide2");
+  const carouselImages2 = qsa(".carousel-slide2 img");
+
+  //Buttons
+  const previousBtn2 = qs("#prevBtn2");
+  const nextBtn2 = qs("#nextBtn2");
+
+  //Counter
+  let counter2 = 1;
+  const size2 = carouselImages2[0].clientWidth;
+
+  window.addEventListener("load", init);
 
   function init() {
-    loadCarousel();
-    nextBtn.addEventListener("click", carouselBtns);
+    loadCarousel1();
+    nextBtn1.addEventListener("click", nextButton1);
+    previousBtn1.addEventListener("click", previousButton1);
+
+    loadCarousel2();
+    nextBtn2.addEventListener("click", nextButton2);
+    previousBtn2.addEventListener("click", previousButton2);
   }
 
-  /** */
-  function loadCarousel() {
-    carouselSlide.style.transform = 'translateX(' + (-size * count) + 'px)';
+  function loadCarousel1() {
+    carouselSlide1.style.transform = 'translateX(' + (-size1*counter1) + 'px)';
+
+    carouselSlide1.addEventListener('transitionend',()=>{
+      if(carouselImages1[counter1].id === 'lastClone1') {
+        carouselSlide1.style.transition = 'none';
+        counter1 = carouselImages1.length -2;
+        carouselSlide1.style.transform = 'translateX(' + (-size1*counter1) + 'px)';
+      }
+      if(carouselImages1[counter1].id === 'firstClone1') {
+        carouselSlide1.style.transition = 'none';
+        counter1 = carouselImages1.length - counter1;
+        carouselSlide1.style.transform = 'translateX(' + (-size1*counter1) + 'px)';
+      }
+    });
   }
 
-  function carouselBtns() {
-    carouselSlide.classList.add("carousel-style");
+  function loadCarousel2() {
+    carouselSlide2.style.transform = 'translateX(' + (-size2*counter2) + 'px)';
+
+    carouselSlide2.addEventListener('transitionend', ()=>{
+      if(carouselImages2[counter2].id === 'lastClone2') {
+        carouselSlide2.style.transition = 'none';
+        counter2 = carouselImages2.length - 2;
+        carouselSlide2.style.transform = 'translateX(' + (-size2*counter2) + 'px)';
+      }
+      if(carouselImages2[counter2].id === 'firstClone2') {
+        carouselSlide2.style.transition = 'none';
+        counter2 = carouselImages2.length - counter2;
+        carouselSlide2.style.transform = 'translateX(' + (-size2*counter2) + 'px)';
+      }
+    });
   }
 
-  /**
-   * Returns a new element with the given tag name.
-   * @param {string} tagName - HTML tag name for new DOM element.
-   * @returns {object} New DOM object for given HTML tag.
-   */
-  function gen(tagName) {
-    return document.createElement(tagName);
+  function nextButton1() {
+    if(counter1 >= carouselImages1.length - 1) return;
+
+    carouselSlide1.style.transition = 'transform 0.5s ease-in-out';
+    counter1++;
+    carouselSlide1.style.transform = 'translateX(' + (-size1*counter1) + 'px)';
+  }
+
+  function previousButton1() {
+    if(counter1 <= 0) return;
+
+    carouselSlide1.style.transition = 'transform 0.5s ease-in-out';
+    counter1--;
+    carouselSlide1.style.transform = 'translateX(' + (-size1*counter1) + 'px)';
+  }
+
+  function nextButton2() {
+    if(counter2 >= carouselImages2.length - 1) return;
+
+    carouselSlide2.style.transition = 'transform 0.5s ease-in-out';
+    counter2++;
+    carouselSlide2.style.transform = 'translateX(' + (-size2*counter2)
+      + 'px)';
+  }
+
+  function previousButton2() {
+    if(counter2 <= 0) return;
+
+    carouselSlide2.style.transition = 'transform 0.5s ease-in-out';
+    counter2--;
+    carouselSlide2.style.transform = 'translateX(' + (-size2*counter2)
+      + 'px)';
   }
 
   /**
