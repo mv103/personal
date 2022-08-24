@@ -1,5 +1,9 @@
 /* CSS for my personal website and portfolio! */
 
+* {
+  box-sizing: border-box;
+}
+
 #home {
   font-family: 'Karla', sans-serif;
   text-transform: uppercase;
@@ -26,6 +30,7 @@
   line-height: 35px;
   border-left: 20px solid black;
   padding-left: 20px;
+
 }
 
 .nav-bar {
@@ -67,7 +72,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: fit-content;
+  max-width: fit-content;
 }
 
 #pfp img {
@@ -77,12 +82,11 @@
 #about {
   position: relative;
   text-align: left;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   padding: 20px;
-  width: 300px;
+  max-width: 350px;
 
-  height:130px;
+  max-height: 150px;
   border:5px solid black;
   z-index:1;
 }
@@ -93,7 +97,7 @@
   left:10%;
   content:"";
   display:block;
-  height:10px;
+  height:20px;
   width:80%;
   background:white;
 }
@@ -104,7 +108,7 @@
   left:10%;
   content:"";
   display:block;
-  height:10px;
+  height:20px;
   width:80%;
   background:white;
 }
@@ -115,7 +119,7 @@
 #about p {
   font-family: 'Karla', sans-serif;
   font-size: 16pt;
-  line-height: 15px;
+  line-height: 7px;
 }
 
 .spacer{
@@ -125,7 +129,7 @@
 #resume-text h1, #projects-text h1, #contact-text h1 {
   display: inline;
   font-family: 'Karla', sans-serif;
-  font-size: 27pt;
+  font-size: 34pt;
   font-weight: 500;
   color: white;
   background-color: black;
@@ -306,8 +310,14 @@
 }
 
 .text h1, .text h2, .text p {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
   font-size: 14pt;
   padding-top: 10px;
+}
+
+.text h1 {
+  font-weight: 600;
 }
 
 .gal-container {
@@ -330,4 +340,51 @@
   flex-direction: row;
   width: 70%;
   margin: auto;
+}
+
+#contact-text {
+  position: absolute;
+}
+
+#contact-info {
+  font-family: 'Karla', sans-serif;
+  font-size: 16pt;
+  line-height: 45px;
+  width: 100%;
+}
+
+
+#contact-info span {
+  font-weight: 600;
+}
+
+#contact-info a {
+  color: black;
+}
+
+#contact-info a:visited {
+  color: black;
+}
+
+#salutation {
+  font-family: 'Libre Bodoni', serif;
+  font-size: 16pt;
+  line-height: 35px;
+  border-left: 20px solid black;
+  padding-left: 20px;
+  margin-top: 30%;
+}
+
+.radial-blur {
+  display: block;
+  padding-left: 10%;
+  z-index: -1;
+}
+
+.btm-circle img {
+  z-index: -1;
+  float: right;
+  max-width: 15%;
+  padding-right: 5%;
+  padding-bottom: 2%;
 }
